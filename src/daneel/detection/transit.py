@@ -18,3 +18,7 @@ m = batman.TransitModel(params, t)    #initializes model
 
 # light curve model
 flux = m.light_curve(params) #calculates light curve
+plt.plot(t, flux)
+plt.xlabel("Time from central transit")
+plt.ylabel("Relative flux")
+plt.savefig('WASP-4 b_assignment1_taskF.png')
