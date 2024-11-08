@@ -18,14 +18,15 @@ def transit(PathInput):
     # light curve model
     flux = m.light_curve(params) #calculates light curve
     plt.plot(t, flux)
-    plt.xlabel("Time from central transit")
-    plt.ylabel("Relative flux")
-    plt.savefig('WASP-4 b_assignment1_taskF.png')
+    plt.xlabel("Time from central transit [s]")
+    plt.ylabel("Relative flux []")
+    plt.title(ParamsDict["Name"])
+    plt.savefig(ParamsDict["Name"]+'.png')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Plot the transit light curve.")
     parser.add_argument("-i", help="Path parameters", required=True, type=str)
-    parser.add_argument("-t", "--transit", help="Generate transit light curve", required=True)
+    parser.add_argument("-t", "--transit", help="Generate transit light curve", required=True)    
     args = parser.parse_args()
 
     if args.transit:
