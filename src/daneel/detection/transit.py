@@ -5,8 +5,8 @@ import matplotlib as plt
 params = batman.TransitParams()       #object to store transit parameters
 params.t0 = 0.                        #time of inferior conjunction
 params.per = 1.338231602                #orbital period
-params.rp = (1.3846*69911)/(1.15 *695000)            #planet radius (in units of stellar radii)
-params.a = (0.02312*149597871)/(1.15*695000)              #semi-major axis (in units of stellar radii)
+params.rp = (1.3846*69911)/(1.15 *695000)  #planet radius (in units of stellar radii)
+params.a = (0.02312*149597871)/(1.15*695000)  #semi-major axis (in units of stellar radii)
 params.inc = 88.87                      #orbital inclination (in degrees)
 params.ecc = 0.0053                    #eccentricity
 params.w = 90.                        #longitude of periastron (in degrees)
