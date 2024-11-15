@@ -34,30 +34,32 @@ def main():
         action="store_true",
     )
 
-    #parser.add_argument(
-    #    "-t",
-    #    "--transit",
-    #    dest="transit",
-    #    required=False,
-    #    help="Create transit lightcurve",
-    #    action="store_true",
-    #)
+    parser.add_argument(
+        "-t",
+        "--transit",
+        dest="transit",
+        required=False,
+        help="Create transit lightcurve",
+        action="store_true",
+    )
     args = parser.parse_args()
 
     """Launch Daneel"""
     start = datetime.datetime.now()
     print(f"Daneel starts at {start}")
 
-    input_pars = Parameters(args.input_file).params
+    #input_pars = Parameters(args.input_file).params
+
+    print("ciao",args.input_file)
+
 
     if args.detect:
         pass
     if args.atmosphere:
         pass
-    #if args.transit:
-     #   print(input_pars)
-      #  transit = Transit()
-       # transit.get_transit()
+    if args.transit:
+        transit = Transit()
+        transit.get_transit(args.input_file)
 
     finish = datetime.datetime.now()
     print(f"Daneel finishes at {finish}")
