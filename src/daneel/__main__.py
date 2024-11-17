@@ -12,6 +12,7 @@ def main():
         "--input",
         dest="input_file",
         type=str,
+        nargs='+',
         required=True,
         help="Input par file to pass",
     )
@@ -50,11 +51,11 @@ def main():
 
     #input_pars = Parameters(args.input_file).params
 
-    print("ciao",args.input_file)
+    print("ciao",args.input_file[0][0])
 
 
     if args.detect:
-        pass
+        pass 
     if args.atmosphere:
         pass
     if args.transit:
