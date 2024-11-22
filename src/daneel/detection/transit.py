@@ -20,7 +20,6 @@ class Transit:
 
             m = batman.TransitModel(params, t, max_err = 0.1)    #initializes model
             
-            #print(ParamsDict)
             # light curve model
             flux = m.light_curve(params) #calculates light curve
             plt.plot(t, flux, label = Names) # DA MODIFICARE PERCHE' NE ESCE SOLO UNO
@@ -28,7 +27,9 @@ class Transit:
             plt.ylabel("Relative flux []")
             #plt.yscale('log')
             plt.tight_layout()
-            plt.legend(loc='lower left')
-            Names=Names+" - "+ParamsDict["Name"]
+         
+            Names=Names+"  "+ParamsDict["Name"]
+            
         plt.title(Names)
+        plt.legend(loc='lower left')
         plt.savefig(Names+'.png')
