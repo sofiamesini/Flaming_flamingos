@@ -23,11 +23,12 @@ class Transit:
             #print(ParamsDict)
             # light curve model
             flux = m.light_curve(params) #calculates light curve
-            plt.plot(t, flux)
+            plt.plot(t, flux, label = Names) # DA MODIFICARE PERCHE' NE ESCE SOLO UNO
             plt.xlabel("Time from central transit [s]")
             plt.ylabel("Relative flux []")
             #plt.yscale('log')
             plt.tight_layout()
-            Names=Names+" "+ParamsDict["Name"]
+            plt.legend(loc='lower left')
+            Names=Names+" - "+ParamsDict["Name"]
         plt.title(Names)
         plt.savefig(Names+'.png')
