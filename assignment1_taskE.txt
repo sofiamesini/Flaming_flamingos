@@ -49,4 +49,4 @@ virtualenv-clone          0.5.7                    pypi_0    pypi
 virtualenvwrapper         4.0                      pypi_0    pypi
 wheel                     0.44.0          py310h06a4308_0  
 xz                        5.4.6                h5eee18b_1  
-zlib                      1.2.13               h5eee18b_1  
+zlib                      1.2.13               h5eee18b_1 
