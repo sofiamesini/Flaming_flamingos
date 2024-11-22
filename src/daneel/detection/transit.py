@@ -23,7 +23,7 @@ class Transit:
             #print(ParamsDict)
             # light curve model
             flux = m.light_curve(params) #calculates light curve
-            plt.scatter(t, flux)
+            plt.plot(t, flux)
             plt.xlabel("Time from central transit [s]")
             plt.ylabel("Relative flux []")
             #plt.yscale('log')
