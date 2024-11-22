@@ -11,7 +11,7 @@ class Transit:
         Labels=["t0","per","rp","a","inc","ecc","w","limb_dark","u"]
         with open(PathInput,"r") as f:
             ParamsDict=yaml.safe_load(f)
-        params = batman.TransitParams()       #object to store transit parameters
+        params = batman.TransitParams()      #object to store transit parameters
         for label in Labels:
             setattr(params,label,ParamsDict[label])    
         t = np.linspace(-0.1, 0.1, 2000)  #times at which to calculate light curve
@@ -24,4 +24,5 @@ class Transit:
         plt.xlabel("Time from central transit [s]")
         plt.ylabel("Relative flux []")
         plt.title(ParamsDict["Name"])
+        print(ParamsDict["Name"]+'.png')
         plt.savefig(ParamsDict["Name"]+'.png')
