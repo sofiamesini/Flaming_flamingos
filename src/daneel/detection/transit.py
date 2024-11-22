@@ -16,7 +16,7 @@ class Transit:
             params = batman.TransitParams()       #object to store transit parameters
             for label in Labels:
                 setattr(params,label,ParamsDict[label])    
-            t = np.linspace(-3, 3, 30000)  #times at which to calculate light curve
+            t = np.linspace(-0.12, 0.12, 30000)  #times at which to calculate light curve
 
             m = batman.TransitModel(params, t, max_err = 0.1)    #initializes model
             
