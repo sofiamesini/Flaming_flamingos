@@ -61,7 +61,9 @@ def main():
     if args.transit:
         transit = Transit()
         transit.get_transit(args.input_file)
-
+    if args.detect:
+        svm=SVM()
+        svm.detect(args.input_file[0])
     finish = datetime.datetime.now()
     print(f"Daneel finishes at {finish}")
 
