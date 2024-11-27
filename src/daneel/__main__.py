@@ -23,7 +23,8 @@ def main():
         dest="detect",
         required=False,
         help="Initialise detection algorithms for Exoplanets",
-        action="store_true",
+        type=str
+        #Previously there was a store true action, why?
     )
 
     parser.add_argument(
@@ -54,16 +55,18 @@ def main():
     print("ciao",args.input_file[0][0])
 
 
-    if args.detect:
-        pass 
-    if args.atmosphere:
-        pass
     if args.transit:
         transit = Transit()
         transit.get_transit(args.input_file)
-    if args.detect:
+    if "svm"==args.detect:
+        print("Starting SVM")
         svm=SVM()
         svm.detect(args.input_file[0])
+    if "nn"==args.detect:
+        print("Starting NN")
+        NN=NNObj()
+        NN.LoadAndTrain(args.input_file[0])
+
     finish = datetime.datetime.now()
     print(f"Daneel finishes at {finish}")
 

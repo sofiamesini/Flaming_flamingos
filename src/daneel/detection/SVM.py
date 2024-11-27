@@ -11,8 +11,8 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, confu
 from sklearn.svm import SVC, LinearSVC, NuSVC
 from scipy import ndimage, fft
 from sklearn.preprocessing import normalize, StandardScaler, MinMaxScaler
-import yaml
 import os
+import yaml
 
 
 class LightFluxProcessor:
