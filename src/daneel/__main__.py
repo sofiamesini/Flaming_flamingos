@@ -67,6 +67,9 @@ def main():
         NN=NNObj()
         NN.LoadAndTrain(args.input_file[0])
 
+    if args.atmosphere:
+        pass
+
     finish = datetime.datetime.now()
     print(f"Daneel finishes at {finish}")
 
