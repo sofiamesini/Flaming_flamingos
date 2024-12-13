@@ -1,0 +1,26 @@
+Chosen architecture: 2 layers with 2 neurons each and a dropout layer after each neuron layer
+
+
+train set error 0.4366031059563593
+dev set error 0.4614035087719298
+------------
+precision_train 0.5669736291335287
+precision_dev 0.5512572533849129
+------------
+recall_train 0.9468717231737155
+recall_dev 0.9018987341772152
+------------
+confusion_matrix_train
+[[ 157 2069]
+ [ 152 2709]]
+confusion_matrix_dev
+[[ 22 232]
+ [ 31 285]]
+------------
+Train Set Positive Predictions 4778
+Dev Set Positive Predictions 517
+------------
+All 0's error train set 0.007273442107332416
+All 0's error dev set 0.008771929824561403
+------------
+------------
