@@ -1,4 +1,4 @@
-Parameters for WASP-107 b, forward model:
+Parameters for WASP-107 b, forward model, task A:
 
 
 [Chemistry]
