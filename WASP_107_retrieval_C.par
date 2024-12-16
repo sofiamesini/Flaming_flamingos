@@ -53,7 +53,7 @@ model_type = transmission
     [[Rayleigh]]
 
 [Observation]
-observed_spectrum = /root/ca24/ext_volume/Flaming_flamingos/Assignment 3/WASP_107_assignment3_taskA_spectrum.dat
+observed_spectrum = /root/ca24/ext_volume/Flaming_flamingos/Assignment_3/WASP_107_assignment3_taskA_spectrum.dat
 
 [Optimizer]
 optimizer = nestle
