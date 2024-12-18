@@ -1,0 +1,3 @@
+PlanetParam: "./WASP_107_retrieval1_C.par"
+output: "./Test.h5"
+Save: "./Test_retrieval.dat"

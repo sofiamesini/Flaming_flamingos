@@ -2,7 +2,7 @@ import datetime
 import argparse
 from daneel.parameters import Parameters
 from daneel.detection import *
-
+import os
 
 def main():
     parser = argparse.ArgumentParser()
@@ -67,8 +67,12 @@ def main():
         NN=NNObj()
         NN.LoadAndTrain(args.input_file[0])
 
-    if args.atmosphere:
-        pass
+    if args.atmosphere=="retrieve":
+        with open(args.input_file[0],"r") as f:
+                ParamsDict=yaml.safe_load(f)
+        inputfile,outputfile,savefile=ParamsDict["PlanetParam"],ParamsDict["output"],ParamsDict["Save"]
+        StrCommand="taurex -i "+inputfile+" -o "+outputfile+" -S "+savefile+" --plot --retrieval"
+        os.system(StrCommand)
 
     finish = datetime.datetime.now()
     print(f"Daneel finishes at {finish}")
