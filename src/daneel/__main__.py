@@ -33,7 +33,7 @@ def main():
         dest="atmosphere",
         required=False,
         help="Atmospheric Characterisazion from input transmission spectrum",
-        action="store_true",
+        #removed action true
     )
 
     parser.add_argument(
@@ -73,6 +73,7 @@ def main():
         inputfile,outputfile,savefile=ParamsDict["PlanetParam"],ParamsDict["output"],ParamsDict["Save"]
         StrCommand="taurex -i "+inputfile+" -o "+outputfile+" -S "+savefile+" --plot --retrieval"
         os.system(StrCommand)
+
 
     finish = datetime.datetime.now()
     print(f"Daneel finishes at {finish}")
