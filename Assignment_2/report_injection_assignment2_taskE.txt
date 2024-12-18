@@ -1,0 +1,124 @@
+Yes INJECTION Kernel:  rbf
+Train Set Error 0.4330646746609004
+Dev Set Error 0.44561403508771935
+------------
+Precision - Train Set 0.5653296266878475
+Precision - Dev Set 0.5543859649122806
+------------
+Recall - Train Set 0.9951066060817896
+Recall - Dev Set 1.0
+------------
+Confusion Matrix - Train Set
+[[  37 2189]
+ [  14 2847]]
+Confusion Matrix - Dev Set
+[[  0 254]
+ [  0 316]]
+------------
+ 
+ 
+------------
+classification_report_train
+              precision    recall  f1-score   support
+
+       False       0.73      0.02      0.03      2226
+        True       0.57      1.00      0.72      2861
+
+    accuracy                           0.57      5087
+   macro avg       0.65      0.51      0.38      5087
+weighted avg       0.64      0.57      0.42      5087
+
+classification_report_dev
+              precision    recall  f1-score   support
+
+       False       0.00      0.00      0.00       254
+        True       0.55      1.00      0.71       316
+
+    accuracy                           0.55       570
+   macro avg       0.28      0.50      0.36       570
+weighted avg       0.31      0.55      0.40       570
+
+
+
+
+Yes INJECTION Kernel:  poly
+Train Set Error 0.43758600353843125
+Dev Set Error 0.44561403508771935
+------------
+Precision - Train Set 0.5624139964615688
+Precision - Dev Set 0.5543859649122806
+------------
+Recall - Train Set 1.0
+Recall - Dev Set 1.0
+------------
+Confusion Matrix - Train Set
+[[   0 2226]
+ [   0 2861]]
+Confusion Matrix - Dev Set
+[[  0 254]
+ [  0 316]]
+------------
+ 
+ 
+------------
+classification_report_train
+              precision    recall  f1-score   support
+
+       False       0.00      0.00      0.00      2226
+        True       0.56      1.00      0.72      2861
+
+    accuracy                           0.56      5087
+   macro avg       0.28      0.50      0.36      5087
+weighted avg       0.32      0.56      0.40      5087
+
+classification_report_dev
+              precision    recall  f1-score   support
+
+       False       0.00      0.00      0.00       254
+        True       0.55      1.00      0.71       316
+
+    accuracy                           0.55       570
+   macro avg       0.28      0.50      0.36       570
+weighted avg       0.31      0.55      0.40       570
+
+
+
+Yes INJECTION Kernel:  linear
+Train Set Error 0.43758600353843125
+Dev Set Error 0.44561403508771935
+------------
+Precision - Train Set 0.5624139964615688
+Precision - Dev Set 0.5543859649122806
+------------
+Recall - Train Set 1.0
+Recall - Dev Set 1.0
+------------
+Confusion Matrix - Train Set
+[[   0 2226]
+ [   0 2861]]
+Confusion Matrix - Dev Set
+[[  0 254]
+ [  0 316]]
+------------
+ 
+ 
+------------
+classification_report_train
+              precision    recall  f1-score   support
+
+       False       0.00      0.00      0.00      2226
+        True       0.56      1.00      0.72      2861
+
+    accuracy                           0.56      5087
+   macro avg       0.28      0.50      0.36      5087
+weighted avg       0.32      0.56      0.40      5087
+
+classification_report_dev
+              precision    recall  f1-score   support
+
+       False       0.00      0.00      0.00       254
+        True       0.55      1.00      0.71       316
+
+    accuracy                           0.55       570
+   macro avg       0.28      0.50      0.36       570
+weighted avg       0.31      0.55      0.40       570
