@@ -86,7 +86,7 @@ def main():
         Df=Df.iloc[:,:-2]
         Df['C'] = np.sqrt(Df.iloc[:, 1])
         df.columns=["wavelength in micron","(rp/rs)^2","sqrt((rp/rs)^2)"]
-        Df.to_csv(savefile, sep=" ")
+        Df.to_csv(savefile, sep=" ", index=False)
 
 
 
