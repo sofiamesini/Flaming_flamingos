@@ -1,0 +1,3 @@
+PlanetParam: "./WASP_107_forward_A.par"
+output: "./Test_model.h5"
+Save: "./Test_model.dat"
