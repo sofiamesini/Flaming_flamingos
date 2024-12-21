@@ -1,6 +1,6 @@
 [Global]
 xsec_path =/root/ca24/ext_volume/xsecs
-cia_path = /root/ca24/ext_volume/hitran 
+cia_path = /root/ca24/ext_volume/cia/hitran
 
 [Chemistry]
 chemistry_type = taurex
@@ -41,6 +41,7 @@ planet_radius = 0.94
 [Star]
 star_type = blackbody
 temperature = 4430
+radius = 0.66
 
 [Model]
 model_type = transmission
@@ -53,11 +54,11 @@ model_type = transmission
     [[Rayleigh]]
 
 [Observation]
-observed_spectrum = /root/ca24/ext_volume/Flaming_flamingos/WASP_107_spectrum_new.dat
+observed_spectrum = /root/ca24/ext_volume/Flaming_flamingos/WASP_107_observed_for_C.dat
 
 [Optimizer]
 optimizer = nestle
-num_live_points=20
+num_live_points=50
 method = multi
 
 [Fitting]
@@ -65,9 +66,9 @@ planet_radius:fit = True
 planet_radius:bounds = 0.5, 1.5
 
 T:fit = True
-T:bounds = 400, 1200
+T:bounds = 300, 1200
 
 H2O:fit = True
-H2O:bounds = 1e-6, 1e-1
+H2O:bounds = 1e-5, 1e-1
 
 
