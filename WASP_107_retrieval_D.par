@@ -53,6 +53,7 @@ planet_radius = 0.94
 [Star]
 star_type = blackbody
 temperature = 4430
+radius = 0.66
 
 [Model]
 model_type = transmission
@@ -65,7 +66,7 @@ model_type = transmission
     [[Rayleigh]]
 
 [Observation]
-observed_spectrum = /root/ca24/ext_volume/Flaming_flamingos/Assignment_3/WASP_107_assignment3_taskA_spectrum.dat
+observed_spectrum = /root/ca24/ext_volume/Flaming_flamingos/WASP_107_observed_for_D.dat
 
 [Optimizer]
 optimizer = nestle
@@ -82,4 +83,8 @@ T:bounds = 600, 1200
 H2O:fit = True
 H2O:bounds = 1e-8, 1e-1
 
+CO:fit = True
+CO:bounds = 1e-8, 1e-1
 
+CH4:fit = True
+CH4:bounds = 1e-8, 1e-1
