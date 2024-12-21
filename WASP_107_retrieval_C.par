@@ -59,14 +59,14 @@ observed_spectrum = /root/ca24/ext_volume/Flaming_flamingos/WASP_107_observed_fo
 [Optimizer]
 optimizer = nestle
 num_live_points=50
-method = single
+method = multi
 
 [Fitting]
 planet_radius:fit = True
 planet_radius:bounds = 0.5, 1.5
 
 T:fit = True
-T:bounds = 300, 800
+T:bounds = 300, 1200
 
 H2O:fit = True
 H2O:bounds = 1e-5, 1e-1
