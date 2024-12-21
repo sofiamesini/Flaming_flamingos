@@ -75,7 +75,7 @@ def main():
         inputfile,outputfile,savefile=ParamsDict["PlanetParam"],ParamsDict["output"],ParamsDict["Save"]
         StrCommand="taurex -i "+inputfile+" -o "+outputfile+" -S "+savefile+" --plot --retrieval"
         os.system(StrCommand)
-   if args.atmosphere=="model":
+    if args.atmosphere=="model":
         with open(args.input_file[0],"r") as f:
                 ParamsDict=yaml.safe_load(f)
         inputfile,outputfile,savefile=ParamsDict["PlanetParam"],ParamsDict["output"],ParamsDict["Save"]

@@ -87,4 +87,8 @@ CO:fit = True
 CO:bounds = 1e-8, 1e-1
 
 CH4:fit = True
+<<<<<<< HEAD
 CH4:bounds = 1e-8, 1e-1
+=======
+CH4:bounds = 1e-8, 1e-1
+>>>>>>> b04eaff13284ad0c187c21759649a7dcd2673d1f
