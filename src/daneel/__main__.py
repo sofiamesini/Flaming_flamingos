@@ -2,8 +2,8 @@ import datetime
 import argparse
 from daneel.parameters import Parameters
 from daneel.detection import *
-
-
+import os
+import pandas as pd
 def main():
     parser = argparse.ArgumentParser()
 
@@ -33,7 +33,9 @@ def main():
         dest="atmosphere",
         required=False,
         help="Atmospheric Characterisazion from input transmission spectrum",
-        action="store_true",
+        type=str
+
+        #removed action true
     )
 
     parser.add_argument(
@@ -67,8 +69,27 @@ def main():
         NN=NNObj()
         NN.LoadAndTrain(args.input_file[0])
 
-    if args.atmosphere:
-        pass
+    if args.atmosphere=="retrieve":
+        with open(args.input_file[0],"r") as f:
+                ParamsDict=yaml.safe_load(f)
+        inputfile,outputfile,savefile=ParamsDict["PlanetParam"],ParamsDict["output"],ParamsDict["Save"]
+        StrCommand="taurex -i "+inputfile+" -o "+outputfile+" -S "+savefile+" --plot --retrieval"
+        os.system(StrCommand)
+    if args.atmosphere=="model":
+        with open(args.input_file[0],"r") as f:
+                ParamsDict=yaml.safe_load(f)
+        inputfile,outputfile,savefile=ParamsDict["PlanetParam"],ParamsDict["output"],ParamsDict["Save"]
+        StrCommand="taurex -i "+inputfile+" -o "+outputfile+" -S "+savefile+" --plot"
+        subprocess.run(["taurex","-i",inputfile,"-o",outputfile,"-S",savefile,"--plot"])
+        print("Does it wait?")
+        Df=pd.read_csv(savefile)
+        Df=Df.iloc[:,:-2]
+        Df['C'] = np.sqrt(Df.iloc[:, 1])
+        df.columns=["wavelength in micron","(rp/rs)^2","sqrt((rp/rs)^2)"]
+        Df.to_csv(savefile, sep=" ", index=False)
+
+
+
 
     finish = datetime.datetime.now()
     print(f"Daneel finishes at {finish}")

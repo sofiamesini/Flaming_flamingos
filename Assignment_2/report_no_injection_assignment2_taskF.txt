@@ -1,0 +1,197 @@
+NON INJECTED
+0
+train set error 0.0005897385492431573
+dev set error 0.00877192982456143
+------------
+precision_train 0.925
+precision_dev 0.5train set error 0.000786318065657543
+dev set error 0.0052631578947368585
+------------
+precision_train 0.9024390243902439
+precision_dev 0.625
+------------
+recall_train 1.0
+recall_dev 1.0
+------------
+confusion_matrix_train
+[[5046    4]
+ [   0   37]]
+confusion_matrix_dev
+[[562   3]
+ [  0   5]]
+------------
+Train Set Positive Predictions 41
+Dev Set Positive Predictions 8
+------------
+All 0's error train set 0.007273442107332416
+All 0's error dev set 0.008771929824561403
+------------
+recall_train 1.0
+recall_dev 1.0
+------------
+confusion_matrix_train
+[[5047    3]
+ [   0   37]]
+confusion_matrix_dev
+[[560   5]
+ [  0   5]]
+------------
+Train Set Positive Predictions 40
+Dev Set Positive Predictions 10
+------------
+All 0's error train set 0.007273442107332416
+All 0's error dev set 0.008771929824561403
+------------
+
+
+1
+train set error 0.000786318065657543
+dev set error 0.01403508771929829
+------------
+precision_train 0.9024390243902439
+precision_dev 0.38461538461538464
+------------
+recall_train 1.0
+recall_dev 1.0
+------------
+confusion_matrix_train
+[[5046    4]
+ [   0   37]]
+confusion_matrix_dev
+[[557   8]
+ [  0   5]]
+------------
+Train Set Positive Predictions 41
+Dev Set Positive Predictions 13
+------------
+All 0's error train set 0.007273442107332416
+All 0's error dev set 0.00877192982
+
+
+2
+(array([0., 1.], dtype=float32), array([5047,   40]))
+train set error 0.0005897385492431573
+dev set error 0.00877192982456143
+------------
+precision_train 0.925
+precision_dev 0.0
+------------
+recall_train 1.0
+recall_dev 0.0
+------------
+confusion_matrix_train
+[[5047    3]
+ [   0   37]]
+confusion_matrix_dev
+[[565   0]
+ [  5   0]]
+------------
+Train Set Positive Predictions 40
+Dev Set Positive Predictions 0
+------------
+All 0's error train set 0.007273442107332416
+All 0's error dev set 0.008771929824561403
+------------
+
+
+
+
+2x2
+train set error 0.0003931590328287715
+dev set error 0.00877192982456143
+------------
+precision_train 0.9487179487179487
+precision_dev 0.0
+------------
+recall_train 1.0
+recall_dev 0.0
+------------
+confusion_matrix_train
+[[5048    2]
+ [   0   37]]
+confusion_matrix_dev
+[[565   0]
+ [  5   0]]
+------------
+Train Set Positive Predictions 39
+Dev Set Positive Predictions 0
+------------
+All 0's error train set 0.007273442107332416
+All 0's error dev set 0.008771929824561403
+------------
+
+WITH DROPOUT
+
+DROPOUT,1,DROPOUT
+train set error 0.0005897385492431573
+dev set error 0.0052631578947368585
+------------
+precision_train 0.925
+precision_dev 0.625
+------------
+recall_train 1.0
+recall_dev 1.0
+------------
+confusion_matrix_train
+[[5047    3]
+ [   0   37]]
+confusion_matrix_dev
+[[562   3]
+ [  0   5]]
+------------
+Train Set Positive Predictions 40
+Dev Set Positive Predictions 8
+------------
+All 0's error train set 0.007273442107332416
+All 0's error dev set 0.008771929824561403
+------------
+
+
+
+DROPOUT
+train set error 0.000786318065657543
+dev set error 0.0052631578947368585
+------------
+precision_train 0.9024390243902439
+precision_dev 0.625
+------------
+recall_train 1.0
+recall_dev 1.0
+------------
+confusion_matrix_train
+[[5046    4]
+ [   0   37]]
+confusion_matrix_dev
+[[562   3]
+ [  0   5]]
+------------
+Train Set Positive Predictions 41
+Dev Set Positive Predictions 8
+------------
+All 0's error train set 0.007273442107332416
+All 0's error dev set 0.008771929824561403
+
+2 dropout 2
+
+train set error 0.0013760566149007003
+dev set error 0.010526315789473717
+------------
+precision_train 0.8409090909090909
+precision_dev 0.45454545454545453
+------------
+recall_train 1.0
+recall_dev 1.0
+------------
+confusion_matrix_train
+[[5043    7]
+ [   0   37]]
+confusion_matrix_dev
+[[559   6]
+ [  0   5]]
+------------
+Train Set Positive Predictions 44
+Dev Set Positive Predictions 11
+------------
+All 0's error train set 0.007273442107332416
+All 0's error dev set 0.008771929824561403
+
