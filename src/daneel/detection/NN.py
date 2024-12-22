@@ -44,7 +44,7 @@ RENDER_PLOT = False  # render loss and accuracy plots
 class NNObj():
     def __init__(self):
         pass
-    def build_network(self,shape):
+    def build_networkNN(self,shape):
         FeaturesN=shape[0]
         model = tf.keras.models.Sequential(
             [
@@ -62,7 +62,23 @@ class NNObj():
         loss_fn = tf.keras.losses.BinaryCrossentropy(from_logits=False)
         model.compile(optimizer="adam", loss=loss_fn, metrics=["accuracy"])
         return model
-    
+    def build_networkCNN(self,shape):
+        FeaturesN=shape[0]
+        model = tf.keras.models.Sequential([
+        # Convolutional Layers
+            tf.keras.layers.Input([FeaturesN]),
+            tf.keras.layers.Reshape((39,39,1)),
+            tf.keras.layers.Conv2D(3, (4, 4), activation = "relu"),
+            tf.keras.layers.Flatten(),
+            tf.keras.layers.Dropout(0.2),
+            tf.keras.layers.Dense(2, activation="relu"),
+            tf.keras.layers.Dense(1, activation="sigmoid"),
+        ])
+        loss_fn = tf.keras.losses.BinaryCrossentropy(from_logits=False)
+        AdamOpt = tf.keras.optimizers.Adam(learning_rate=0.1)
+        model.compile(optimizer=AdamOpt,loss=loss_fn, metrics=["accuracy"])
+        return model
+
     def np_X_Y_from_df(self,df):
         df = shuffle(df)
         df_X = df.drop(["LABEL"], axis=1)
@@ -70,7 +86,7 @@ class NNObj():
         Y_raw = np.array(df["LABEL"]).reshape((len(df["LABEL"]), 1))
         Y = Y_raw == 2
         return X, Y
-    def LoadAndTrain(self,ConfigFile):
+    def LoadAndTrain(self,ConfigFile,typeNetwork):
         with open(ConfigFile,"r") as f:
                 ParamsDict=yaml.safe_load(f)
         root_dir=ParamsDict["dir"]
@@ -99,7 +115,9 @@ class NNObj():
         # Load X and Y numpy arrays
         X_train, Y_train = self.np_X_Y_from_df(df_train_processed)
         X_dev, Y_dev = self.np_X_Y_from_df(df_dev_processed)
-
+        if typeNetwork=="cnn":
+            X_train,Y_train=X_train[:,:1521],Y_train[:,:1521]
+            X_dev,Y_dev=X_dev[:,:1521],Y_dev[:,:1521]
         # Print data set stats
         (num_examples, n_x) = (
             X_train.shape
@@ -115,8 +133,13 @@ class NNObj():
 
         # Build model
         print(X_train.shape[1:])
-        model = self.build_network(X_train.shape[1:])
-
+        if typeNetwork=="nn":
+            model = self.build_networkNN(X_train.shape[1:])
+        elif typeNetwork=="cnn":
+            model = self.build_networkCNN(X_train.shape[1:])
+        else:
+            print("ERROR: choose nn/cnn")
+            return -1
         # Load weights
         load_path = ""
         my_file = Path(load_path)

@@ -67,7 +67,11 @@ def main():
     if "nn"==args.detect:
         print("Starting NN")
         NN=NNObj()
-        NN.LoadAndTrain(args.input_file[0])
+        NN.LoadAndTrain(args.input_file[0],typeNetwork="nn")
+    if "cnn"==args.detect:
+        print("Starting NN")
+        CNN=NNObj()
+        CNN.LoadAndTrain(args.input_file[0],typeNetwork="cnn")
 
     if args.atmosphere=="retrieve":
         with open(args.input_file[0],"r") as f:
@@ -75,7 +79,7 @@ def main():
         inputfile,outputfile,savefile=ParamsDict["PlanetParam"],ParamsDict["output"],ParamsDict["Save"]
         StrCommand="taurex -i "+inputfile+" -o "+outputfile+" -S "+savefile+" --plot --retrieval"
         os.system(StrCommand)
-   if args.atmosphere=="model":
+    if args.atmosphere=="model":
         with open(args.input_file[0],"r") as f:
                 ParamsDict=yaml.safe_load(f)
         inputfile,outputfile,savefile=ParamsDict["PlanetParam"],ParamsDict["output"],ParamsDict["Save"]
