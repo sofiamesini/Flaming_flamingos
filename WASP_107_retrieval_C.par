@@ -53,7 +53,7 @@ model_type = transmission
     [[Rayleigh]]
 
 [Observation]
-observed_spectrum = /root/ca24/ext_volume/Flaming_flamingos/WASP_107_spectrum_new.dat
+observed_spectrum = /root/ca24/ext_volume/Flaming_flamingos/WASP_107_observed_for_C.dat
 
 [Optimizer]
 optimizer = nestle
@@ -70,4 +70,8 @@ T:bounds = 400, 1200
 H2O:fit = True
 H2O:bounds = 1e-6, 1e-1
 
+CO2:fit = True
+CO2:bounds = 1e-6, 1e-1
 
+CH4:fit = True
+CH4:bounds = 1e-6, 1e-1
