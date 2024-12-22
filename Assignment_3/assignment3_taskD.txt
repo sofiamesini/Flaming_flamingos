@@ -1,0 +1,42 @@
+For point D of assignment 3 many different test runs were performed and two of them were chosen to report in the submission file.
+	
+The first one was performed with 90 live points and the retrieved parameters were the radius and the temperature of the planet and the molecular abundance of H2O.
+The fixed values for the parameters are shown below:
+
+planet radius = 0.94 Rj
+planet temperature T = 770 K
+log(H2O) = -2.1
+
+The values obtained from the retrieval are:
+
+planet radius  =   0.87896   +/- 0.00
+T =   603.814 + 4.40 /- 2.87
+log(H2O) =    -1.00022  +/- 0.00
+
+The results are not optimal because the values we need for the fit are actually outside of the ranges covered by the fitted parameters; this is probably due to the fact that the model is too simple to correctly reproduce the spectrum, despite the high number of live points.
+The chosen number of live points was 90 due to computational reasons.
+
+The posterior distribution plots are saved as "posteriors_D_90livepoints.pdf".
+
+-------------------
+
+The second run was performed with 35 live points and the retrieved parameters were the radius and the temperature of the planet and the molecular abundances of H2O, CH4 and CO.
+The fixed values for the parameters are shown below:
+
+planet radius = 0.94 Rj
+planet temperature T = 770 K
+log(H2O) = -2.1
+log(CH4) = -5.8
+log(CO) = -1.9
+
+The values obtained from the retrieval are:
+
+planet radius =   0.896984 +0.00 / -0.01
+T = 602.594 +8.03 / -2.19
+log_H2O =   -3.78219 +2.63 / -0.28
+log_CH4 = -7.27815 + 0.23 / -0.42
+log_CO =  -1.00535 +0.00 / -0.03
+
+Just like in the previous run, the results don't describe very well the original composition, probably due both to the simplifications in the model and to the few live points chosen for this run, that couldn't be increased due to insufficient computational power.
+
+The posterior distribution plots are saved as "posteriors_D_molecules.pdf"
