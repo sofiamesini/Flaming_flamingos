@@ -67,7 +67,11 @@ def main():
     if "nn"==args.detect:
         print("Starting NN")
         NN=NNObj()
-        NN.LoadAndTrain(args.input_file[0])
+        NN.LoadAndTrain(args.input_file[0],typeNetwork="nn")
+    if "cnn"==args.detect:
+        print("Starting NN")
+        CNN=NNObj()
+        CNN.LoadAndTrain(args.input_file[0],typeNetwork="cnn")
 
     if args.atmosphere=="retrieve":
         with open(args.input_file[0],"r") as f:
@@ -81,12 +85,12 @@ def main():
         inputfile,outputfile,savefile=ParamsDict["PlanetParam"],ParamsDict["output"],ParamsDict["Save"]
         StrCommand="taurex -i "+inputfile+" -o "+outputfile+" -S "+savefile+" --plot"
         subprocess.run(["taurex","-i",inputfile,"-o",outputfile,"-S",savefile,"--plot"])
-        print("Does it wait?")
-        Df=pd.read_csv(savefile)
+        Df=pd.read_csv(savefile,sep=" ")
         Df=Df.iloc[:,:-2]
-        Df['C'] = np.sqrt(Df.iloc[:, 1])
-        df.columns=["wavelength in micron","(rp/rs)^2","sqrt((rp/rs)^2)"]
+        Df["C"] = np.sqrt(Df.iloc[:, 1])
+        Df.columns=["wavelength in micron","(rp/rs)^2","sqrt((rp/rs)^2)"]
         Df.to_csv(savefile, sep=" ", index=False)
+
 
 
 
