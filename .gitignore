@@ -13,6 +13,9 @@ plot_D_test5/
 plot_D_test9/
 output_dictionaries/
 *.h5
+plots/
+taurex_spectra/raw_observed_spectra/
+taurex_spectra/retrieval_spectra_D_tests/
 
 # Distribution / packaging
 .Python
