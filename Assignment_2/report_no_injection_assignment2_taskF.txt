@@ -1,5 +1,6 @@
 NON INJECTED
-0
+0 neurons:
+
 train set error 0.0005897385492431573
 dev set error 0.00877192982456143
 ------------
@@ -43,8 +44,9 @@ All 0's error train set 0.007273442107332416
 All 0's error dev set 0.008771929824561403
 ------------
 
+----------------------------------------------------
+1 neuron, one layer:
 
-1
 train set error 0.000786318065657543
 dev set error 0.01403508771929829
 ------------
@@ -67,8 +69,10 @@ Dev Set Positive Predictions 13
 All 0's error train set 0.007273442107332416
 All 0's error dev set 0.00877192982
 
+-----------------------------------------
 
-2
+2 neurons, one layer: 
+
 (array([0., 1.], dtype=float32), array([5047,   40]))
 train set error 0.0005897385492431573
 dev set error 0.00877192982456143
@@ -93,10 +97,9 @@ All 0's error train set 0.007273442107332416
 All 0's error dev set 0.008771929824561403
 ------------
 
+-------------------------------------
+2 layers, each one with 2 neurons: 
 
-
-
-2x2
 train set error 0.0003931590328287715
 dev set error 0.00877192982456143
 ------------
@@ -120,9 +123,12 @@ All 0's error train set 0.007273442107332416
 All 0's error dev set 0.008771929824561403
 ------------
 
+----------------------------------------------------
+
 WITH DROPOUT
 
-DROPOUT,1,DROPOUT
+one dropout layer, one layer with 1 neuron, one dropout layer: 
+
 train set error 0.0005897385492431573
 dev set error 0.0052631578947368585
 ------------
@@ -147,8 +153,9 @@ All 0's error dev set 0.008771929824561403
 ------------
 
 
+---------------------------------------------
+dropout layer:
 
-DROPOUT
 train set error 0.000786318065657543
 dev set error 0.0052631578947368585
 ------------
@@ -171,7 +178,8 @@ Dev Set Positive Predictions 8
 All 0's error train set 0.007273442107332416
 All 0's error dev set 0.008771929824561403
 
-2 dropout 2
+-----------------------------------------------
+one layer with 2 neurons,  dropout layer, one layer with 2 neurons:
 
 train set error 0.0013760566149007003
 dev set error 0.010526315789473717
