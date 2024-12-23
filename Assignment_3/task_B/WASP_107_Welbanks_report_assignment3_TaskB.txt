@@ -63,8 +63,8 @@ model_type = transmission
 
     [[Rayleigh]]
 
-
-The actual chemistry of the atmosphere for WASP-107 b are reported at page 24 of Welbanks et. al. 2024 and below:
+-------------------------------
+The actual chemistry of the atmosphere for WASP-107 b can be seen at page 24 of Welbanks et. al. 2024 and below:
 
 log(H2O) = -2.1 +0.2/-0.3
 log(CH4) = -5.8 +0.2/-0.2
