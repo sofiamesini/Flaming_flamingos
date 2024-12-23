@@ -1,0 +1,23 @@
+For point C of assignment 3 we were only able to retrieve three molecules.
+	
+The run was performed with 20 live points and the retrieved parameters were the radius and the temperature of the planet and the molecular abundances of H2O, CO2 and CH4. The chosen number of live points was 20 due to computational reasons.
+The fixed values for the parameters are shown below:
+
+planet radius = 0.94 Rj
+planet temperature T = 770 K
+log(H2O) = -2.32296
+log(CH4) = -3.37669
+log(CO2) = -3.6941
+
+The values obtained from the retrieval are:
+
+planet radius  =   0.94   +/- 0.00
+T =   770.04 + 1.61 /- 1.70
+log(H2O) =    -2.32  +/- 0.01
+log(CH4) =    -3.38 + 0.02/- 0.01
+log(CO2) =    -3.69 +/- 0.02
+
+
+The posterior distribution plots are saved as "posteriors_C_molecules.pdf".
+
+-------------------
