@@ -1,4 +1,6 @@
-Chosen architecture: 2 layers with 2 neurons each and a dropout layer after each neuron layer
+We tried two different architectures:
+
+2 layers with 2 neurons each and a dropout layer after each neuron layer
 
 
 train set error 0.4366031059563593
@@ -24,3 +26,34 @@ All 0's error train set 0.007273442107332416
 All 0's error dev set 0.008771929824561403
 ------------
 ------------
+
+this architecture provided a higher value for the recall.
+--------------------------------------------
+
+1 neuron layer, dropout layer, 2 neurons layer, dropout layer:
+
+train set error 0.44485944564576374
+dev set error 0.4526315789473684
+------------
+precision_train 0.579226285108638
+precision_dev 0.5625
+------------
+recall_train 0.764068507514855
+recall_dev 0.8259493670886076
+------------
+confusion_matrix_train
+[[ 638 1588]
+ [ 675 2186]]
+confusion_matrix_dev
+[[ 51 203]
+ [ 55 261]]
+------------
+Train Set Positive Predictions 3774
+Dev Set Positive Predictions 464
+------------
+All 0's error train set 0.007273442107332416
+All 0's error dev set 0.008771929824561403
+------------
+------------
+
+this architecture provided a higher value for the trace of the test set's confusion matrix.
